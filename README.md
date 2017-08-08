@@ -74,6 +74,12 @@ const result = await fullcontact.viewRequests({
 
 ```
 
+### Dependencies
+
+https://github.com/form-data/form-data
+
+https://github.com/request/request
+
 
 ### License
 
