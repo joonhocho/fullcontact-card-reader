@@ -1,0 +1,60 @@
+{
+  "name": "fullcontact-card-reader",
+  "version": "0.0.1",
+  "description": "FullContact Card Reader API Wrapper for Node.js",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "build-watch": "babel src --watch --out-dir lib",
+    "clear": "rm -rf ./lib ./coverage ./.nyc_output",
+    "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
+    "nyc": "nyc npm test && nyc report --reporter=lcov",
+    "prepublish": "npm run clear && npm test",
+    "pretest": "npm run build",
+    "start": "npm test",
+    "test": "mocha",
+    "test-watch": "mocha --watch",
+    "update-D": "npm install --save-dev babel-cli@latest babel-plugin-module-resolver@latest babel-plugin-transform-class-properties@latest babel-plugin-transform-object-rest-spread@latest babel-preset-env@latest babel-register@latest chai@latest chai-as-promised@latest coveralls@latest mocha@latest nyc@latest",
+    "watch": "npm run build-watch & npm run test-watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joonhocho/fullcontact-card-reader.git"
+  },
+  "keywords": [
+    "FullContact",
+    "business card reader",
+    "business card",
+    "api",
+    "fetch",
+    "fetcher"
+  ],
+  "author": "Joon Ho Cho",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joonhocho/fullcontact-card-reader/issues"
+  },
+  "homepage": "https://github.com/joonhocho/fullcontact-card-reader#readme",
+  "dependencies": {
+    "form-data": "^2.2.0",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-module-resolver": "^2.7.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.24.1",
+    "chai": "^4.1.1",
+    "chai-as-promised": "^7.1.1",
+    "coveralls": "^2.13.1",
+    "es6-promise": "^4.1.1",
+    "fast-async": "^6.3.0",
+    "mocha": "^3.5.0",
+    "nyc": "^11.1.0"
+  }
+}
